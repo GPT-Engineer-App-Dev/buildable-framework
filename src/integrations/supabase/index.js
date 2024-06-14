@@ -30,6 +30,8 @@ table: comments
     created_at: string
     content: string
     event_id: number // foreign key to events.id
+    highlighted: boolean // new field
+    pinned: boolean // new field
 
 */
 
