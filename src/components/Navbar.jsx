@@ -11,6 +11,9 @@ const Navbar = () => {
         <Link as={NavLink} to="/events" color="white" fontWeight="bold" fontSize="lg">
           Events
         </Link>
+        <Link as={NavLink} to="/about" color="white" fontWeight="bold" fontSize="lg">
+          About
+        </Link>
       </Flex>
     </Box>
   );
