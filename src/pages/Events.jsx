@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Heading, VStack, Button, Input, Box, Text, HStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { useEvents, useAddEvent, useUpdateEvent, useDeleteEvent } from "../integrations/supabase/index.js";
 
 const Events = () => {
@@ -53,7 +54,7 @@ const Events = () => {
               </VStack>
             ) : (
               <VStack spacing={2} align="start">
-                <Text fontSize="lg" fontWeight="bold">{event.name}</Text>
+                <Link to={`/events/${event.id}`}><Text fontSize="lg" fontWeight="bold">{event.name}</Text></Link>
                 <Text>{event.date}</Text>
                 <HStack spacing={2}>
                   <Button size="sm" onClick={() => setEditingEvent(event)}>Edit</Button>
